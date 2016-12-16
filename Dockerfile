@@ -14,4 +14,5 @@ RUN apt-get update -qy \
       ruby${RUBY_VERSION}-dev
 
 RUN echo "gem: --no-document --no-ri" > /etc/gemrc
-RUN gem install bundler
+RUN gem update --system \
+ && gem install bundler
